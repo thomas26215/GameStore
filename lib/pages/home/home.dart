@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:play_store/pages/home/widgets/header.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,7 +14,7 @@ class HomePage extends StatelessWidget {
             Transform(transform: Matrix4.identity()..rotateZ(20), // Faire une rotation de mes items à l'intérieur
             origin: const Offset(150, 50),
               child: Image.asset( //Afficher mon image
-                'asset/images/bg_liquid.png',
+                'assets/images/bg_liquid.png',
                 width: 200,
               ),
             ),
@@ -23,13 +24,15 @@ class HomePage extends StatelessWidget {
               child: Transform(transform: Matrix4.identity()..rotateZ(20),
               origin: const Offset(180, 100),
                 child: Image.asset(
-                  'asset/images/bg_liquid.png',
+                  'assets/images/bg_liquid.png',
                   width: 200,
                 ), //Afficher une image
               ),
             ),
             Column(
-              children: [],
+              children: [
+                  HeaderSection(),
+              ],
             ),
           ],
         )
